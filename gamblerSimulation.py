@@ -1,4 +1,4 @@
-# UC4 – Repeat Betting Until Stake Reaches Goal or Zero
+# UC5 – Count Total Number of Bets Made
 
 import random
 
@@ -6,9 +6,12 @@ stake = 100
 goal = 200
 bet_amount = 1
 
+total_bets = 0
+
 while stake > 0 and stake < goal:
 
     bet_result = random.randint(0, 1)
+    total_bets += 1
 
     if bet_result == 1:
         stake += bet_amount
@@ -16,8 +19,4 @@ while stake > 0 and stake < goal:
         stake -= bet_amount
 
 print("Final Stake:", stake)
-
-if stake == goal:
-    print("Gambler reached the goal!")
-else:
-    print("Gambler went broke.")
+print("Total Bets Made:", total_bets)
