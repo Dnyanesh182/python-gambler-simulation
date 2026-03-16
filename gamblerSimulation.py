@@ -1,4 +1,4 @@
-# UC7 – Calculate Win Percentage
+# UC8 – Calculate Loss Percentage
 
 import random
 
@@ -22,10 +22,10 @@ while stake > 0 and stake < goal:
         stake -= bet_amount
         losses += 1
 
-win_percentage = (wins / total_bets) * 100
+loss_percentage = (losses / total_bets) * 100
 
 print("Final Stake:", stake)
 print("Total Bets:", total_bets)
 print("Wins:", wins)
 print("Losses:", losses)
-print("Win Percentage:", win_percentage, "%")
+print("Loss Percentage:", loss_percentage, "%")
