@@ -1,9 +1,14 @@
-# UC1 – Initialize Stake, Goal, and Bet Amount
+# UC2 – Simulate a Single Bet (Win or Loss)
+
+import random
 
 stake = 100
 goal = 200
 bet_amount = 1
 
-print("Initial Stake:", stake)
-print("Goal:", goal)
-print("Bet Amount:", bet_amount)
+bet_result = random.randint(0, 1)
+
+if bet_result == 1:
+    print("Gambler wins the bet")
+else:
+    print("Gambler loses the bet")
