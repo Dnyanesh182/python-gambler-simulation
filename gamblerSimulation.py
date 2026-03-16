@@ -1,4 +1,4 @@
-# UC5 – Count Total Number of Bets Made
+# UC6 – Count Total Wins and Losses
 
 import random
 
@@ -7,6 +7,8 @@ goal = 200
 bet_amount = 1
 
 total_bets = 0
+wins = 0
+losses = 0
 
 while stake > 0 and stake < goal:
 
@@ -15,8 +17,12 @@ while stake > 0 and stake < goal:
 
     if bet_result == 1:
         stake += bet_amount
+        wins += 1
     else:
         stake -= bet_amount
+        losses += 1
 
 print("Final Stake:", stake)
-print("Total Bets Made:", total_bets)
+print("Total Bets:", total_bets)
+print("Total Wins:", wins)
+print("Total Losses:", losses)
